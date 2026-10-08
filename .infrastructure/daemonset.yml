@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: busybox-pinger
-        image: ikulyk404/busyboxplus:curl
-        command: ["sh", "-c", "while true; do curl -s http://cluster.local; sleep 5; done"]
+        image: busyboxplus:curl
+        command: ["sh", "-c", "while true; do curl -s http://todoapp-clusterip.mateapp.svc.cluster.local:80/; sleep 5; done"]
         resources:
           requests:
             cpu: "10m"
